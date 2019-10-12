@@ -1,6 +1,7 @@
 import express from "express";
 import routes from "./routes";
 import path from "path";
+import bodyParser from "body-parser";
 import "./database";
 
 class App {
