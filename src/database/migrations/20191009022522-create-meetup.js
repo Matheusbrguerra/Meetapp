@@ -9,19 +9,19 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true
       },
-      banner_id: {
+      file_id: {
         type: Sequelize.INTEGER,
         references: { model: "files", key: "id" },
         onUpdate: "CASCADE",
-        onDelete: "SET NULL",
-        allowNull: true
+        onDelete: "CASCADE",
+        allowNull: false
       },
-      creator_id: {
+      user_id: {
         type: Sequelize.INTEGER,
         references: { model: "users", key: "id" },
         onUpdate: "CASCADE",
-        onDelete: "SET NULL",
-        allowNull: true
+        onDelete: "CASCADE",
+        allowNull: false
       },
       title: {
         type: Sequelize.STRING,
